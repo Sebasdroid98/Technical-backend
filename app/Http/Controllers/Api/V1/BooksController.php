@@ -63,8 +63,9 @@ class BooksController extends Controller
             return response()->json($respuestaAPI, 200);
         }
 
-        $respuestaAPI['data'] = $this->booksQuery->storeBook($datosRecibidos);
-        return response()->json($datosRecibidos, 200);
+        $libroTemporal = $this->booksQuery->storeBook($datosRecibidos);
+        $respuestaAPI['data'] = ($libroTemporal) ? 'El Libro fue registrado con exito' : "El Libro no se registro";
+        return response()->json($respuestaAPI, 200);
     }
 
     /**

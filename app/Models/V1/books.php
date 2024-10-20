@@ -22,8 +22,8 @@ class books extends Model
     /**
      * Mutador para almacenar el nombre del libro en mayúsculas
      */
-    public function setNombreLibroAttribute($value)
-    {
-        $this->attributes['nombre_libro'] = strtoupper($value);
-    }
+    // public function setNombreLibroAttribute($value)
+    // {
+    //     $this->attributes['nombre_libro'] = strtoupper($value);
+    // }
 }
